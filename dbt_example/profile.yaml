@@ -1,0 +1,10 @@
+dbt_example:
+  target: dev
+  outputs:
+    dev:
+      dataset: "{{ env_var('DBT_DBNAME', 'dbt_dw') }}"
+      keyfile: /home/eiji/.dbt/cursodbt-509201-7be36e9ef710.json
+      method: service-account
+      project: cursodbt-509201
+      threads: 4
+      type: bigquery
